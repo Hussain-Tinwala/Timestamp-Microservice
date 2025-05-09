@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timestamp Microservice | freeCodeCamp</title>
+    <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        background-attachment: fixed;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .glow {
+        box-shadow: 0 0 30px rgba(0, 213, 255, 0.3);
+      }
+
+      .fade-in {
+        animation: fadeIn 1.2s ease-out forwards;
+        opacity: 0;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="text-white min-h-screen flex items-center justify-center p-4">
+    <div class="glass glow max-w-2xl w-full p-8 rounded-xl fade-in text-center">
+      <h1 class="text-4xl font-extrabold mb-4 text-cyan-300">🌐 Timestamp Microservice</h1>
+      <p class="text-gray-200 text-lg mb-6">Convert human-readable dates and timestamps instantly!</p>
+      <hr class="border-gray-400 mb-6" />
+
+      <div class="text-left space-y-4">
+        <h2 class="text-2xl font-bold text-cyan-200">📌 Example Usage:</h2>
+        <ul class="list-disc list-inside text-gray-100">
+          <li><a href="api/2015-12-25" class="text-yellow-300 hover:underline">/api/2015-12-25</a></li>
+          <li><a href="api/1451001600000" class="text-yellow-300 hover:underline">/api/1451001600000</a></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-cyan-200 mt-6">🧾 Example Output:</h2>
+        <div class="bg-black/30 border border-cyan-400 rounded-lg p-4 text-sm font-mono text-green-200">
+          { "unix": 1451001600000, "utc": "Fri, 25 Dec 2015 00:00:00 GMT" }
+        </div>
+      </div>
+
+      <footer class="mt-8 text-sm text-gray-300">
+        By <a href="#" class="text-cyan-300 hover:underline">Hussain</a>
+      </footer>
+    </div>
+  </body>
+</html>
